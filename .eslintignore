@@ -1,0 +1,9 @@
+node_modules/
+
+babel.config.js
+metro.config.js
+app.config.ts
+
+src/generated/
+
+src/startup/apollo/cache-options.ts

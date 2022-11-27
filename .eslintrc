@@ -1,0 +1,148 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module",
+    "tsconfigRootDir": "./",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "@react-native-community",
+    "airbnb",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "./.imports.eslintrc.js"
+  ],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "import-helpers"
+  ],
+  "rules": {
+    "semi": 2,
+    "curly": ["error", "multi-line"],
+    "global-require": 0,
+    "guard-for-in": 0,
+    "implicit-arrow-linebreak": 0,
+    "max-len": ["error", {
+      "code": 100,
+      "ignoreComments": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true
+    }],
+    "no-await-in-loop": 0,
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-continue": 0,
+    "no-nested-ternary": 0,
+    "no-param-reassign": 0,
+    "no-plusplus": 0,
+    "no-restricted-syntax": 0,
+    "no-return-await": 0,
+    "no-underscore-dangle": 0,
+    "object-curly-newline": ["warn", {
+      "multiline": true,
+      "consistent": true
+    }],
+    "camelcase": "off",
+    "no-void": "off",
+
+    "arrow-parens": ["error", "as-needed"],
+    "jsx-quotes": ["error", "prefer-single"],
+    "quotes": ["error", "single", {
+      "avoidEscape": true
+    }],
+    "newline-before-return": "warn",
+    "newline-after-var": "warn",
+
+    "import/no-anonymous-default-export": ["error"],
+    "import/extensions": 0,
+    "import/no-extraneous-dependencies": "off",
+
+    "no-use-before-define": "off",
+    "consistent-return": "off",
+
+    "@typescript-eslint/no-unsafe-argument": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/no-use-before-define": ["error", {
+      "variables": false
+    }],
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/prefer-regexp-exec": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "@typescript-eslint/unbound-method": "off",
+    "@typescript-eslint/explicit-function-return-type": [1, {
+      "allowExpressions": true
+    }],
+
+    "react/no-unstable-nested-components": [
+      "error",
+      { "allowAsProps": true }
+    ],
+    "react/require-default-props": "off",
+    "react/tsx-uses-react": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": ["function-expression", "arrow-function"],
+        "unnamedComponents": ["function-expression", "arrow-function"]
+      }
+    ],
+    "react/jsx-key": 2,
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "react/jsx-uses-vars": "error",
+    "react/self-closing-comp": ["error", {
+      "component": true
+    }],
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-filename-extension": 0,
+    "react/jsx-wrap-multilines": 0,
+    "react/jsx-indent-props": ["error", 2],
+    "react/jsx-indent": ["error", 2],
+    "react/jsx-fragments": ["error", "element"],
+    "react/jsx-one-expression-per-line": "off",
+    // "react/jsx-one-expression-per-line": ["error", {
+    //   "allow": "single-child"
+    // }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+
+    "react-native/no-unused-styles": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {},
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".ios.js", ".android.js"],
+        "paths": [".", "src"]
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}
